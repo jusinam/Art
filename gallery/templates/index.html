@@ -1,0 +1,25 @@
+{%extends 'base.html'%} 
+{% block content %}
+
+
+    <div class="container">
+        <div class="row no-gutters">
+            {% for image in art_images %}
+            <div class="col-md-6 col-lg-4 item zoom-on-hover">
+                <a class="lightbox" href="{{image.image_path.url}}" data-caption="{{image.image_name}}: {{image.image_description}}">
+                    <img class="img-fluid image" src="{{image.image_path.url}}">
+                    <p class="description">
+                        
+                        <small class="description-body">{{image.image_description}}
+                       
+                         <i class="far fa-clock"></i> {{image.post_date | timesince}} ago</small>  
+                    </p>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+
+
+{% endblock %}
