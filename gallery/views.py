@@ -1,6 +1,9 @@
-from django.http import HttpResponse
+from django.shortcuts import render
+from .models import Image
 
 
 # Create your views here.
 def art(request):
-    return HttpResponse('Welcome to smaTIQS')
+    art_images = Image.objects.all()
+
+    return render(request,'index.html',{'art_images':art_images})
