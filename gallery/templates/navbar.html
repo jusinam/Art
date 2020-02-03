@@ -9,7 +9,7 @@
 
 <body>
     <!--Navbar-->
-    <nav class="pl-5 pr-5 navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <nav class="pl-5 pr-5 navbar navbar-expand-lg navbar-dark bg-transparent sticky-top">
 
         <!-- Navbar brand -->
         <a class="navbar-brand font-weight-bold" href="{% url 'art' %}"> smaTIQS </a>
@@ -33,7 +33,7 @@
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Categories
                     </a>
-                    <div class="dropdown-menu bg bg-dark" aria-labelledby="navbarDropdown">
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown" >
                         {% for cat in categories %}
                         <a class="dropdown-item text-white" href="/category/{{cat.category_name}}">{{cat.category_name}}</a>
                         <div class="dropdown-divider"></div>
@@ -45,7 +45,7 @@
                     aria-haspopup="true" aria-expanded="false">
                     Locations
                 </a>
-                <div class="dropdown-menu bg bg-dark " aria-labelledby="navbarDropdown">
+                <div class="dropdown-menu " aria-labelledby="navbarDropdown" >
                     {% for cat in location_results %}
                     <a class="dropdown-item text-white" href="/location/{{cat.location_name}}">{{cat.location_name}}</a>
                     <div class="dropdown-divider"></div>                  
@@ -65,6 +65,10 @@
         <!-- Collapsible content -->
     </nav>
     <!--/.Navbar-->
+    <!-- <nav class="pl-5 pr-5 navbar navbar-expand-lg navbar-dark bg-transparent sticky-top" id="basicExampleNav">
+        <h2 class="navbar-brand font-weight-bold text-white text-center" >Welcome To smaTIQS Gallery</h2>
+    </nav> -->
+
 </body>
 
 </html>

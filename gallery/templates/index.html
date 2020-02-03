@@ -11,28 +11,36 @@
                         {% endif %}
                     
                       </div>
+
         <section class="gallery-block compact-gallery">
         <div class="row no-gutters">
             {% for image in art_images %}
-            <div class="col-md-4 col-sm-6 col-xs-12  item zoom-on-hover">
-                <div class="view overlay ">
+            <div class="col-md-4 col-sm-6 col-xs-12  item">
+                <div class="view overlay text-white ">
                     <a>
                     <img class="img-thumbnail" src="{{image.image_path.url}}"  class="img-fluid " alt="">
-                    <span class="description">
-                        <span class="description-heading">{{image.image_name}}</span>
-                        <span class="description-body">{{image.image_description}}</span>
-                    <div class="mask flex-center rgba-purple-light " style="display: flex;" >
+                    <div class="description mask flex-center rgba-purple-light " style="display: flex;">
+                        <p class="description-heading">{{image.image_name}}</p>
+                        <p class="description-body">{{image.image_description}}</p>
+                    
+
                         <p class="white-text description-body "> <span class="badge"> <i class="fas fa-map-marker-alt"></i> {{image.image_location}}</span> </p>
+
                         <p>  <span id="image{{image.id}}" hidden>{{image.image_path.url}}</span>
                             <a onclick="copyToClipboard('image{{image.id}}')" class=" text-white" ><i class="far fa-copy"></i></a> 
                         </p>
-                        <p> <small class="ml-45"><i class="far fa-clock"></i> {{image.post_date | timesince}} ago</small> </p></span></div>
-                    </div></a>
+
+                        <p> <small class="ml-45"><i class="far fa-clock"></i> {{image.post_date | timesince}} ago</small> </p>
+                    
+                    
+                </a>
+            </div>
+        </div>
                 
             </div>
             {% endfor %}
         </div>
-    </div>
+    
 
 </section>
 
