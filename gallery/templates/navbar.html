@@ -12,7 +12,7 @@
     <nav class="pl-5 pr-5 navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
 
         <!-- Navbar brand -->
-        <a class="navbar-brand font-weight-bold" href="{% url 'art' %}">smaTIQS Gallery</a>
+        <a class="navbar-brand font-weight-bold" href="{% url 'art' %}"> smaTIQS </a>
 
         <!-- Collapse button -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
@@ -26,29 +26,42 @@
             <!-- Links -->
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link bg bg-transparent" href="{% url 'art' %}">Feeds<span class="sr-only">(current)</span></a>
+                    <a class="nav-link bg bg-transparent" href="{% url 'art' %}">FEEDS<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Categories
                     </a>
+                    <div class="dropdown-menu bg bg-dark" aria-labelledby="navbarDropdown">
+                        {% for cat in categories %}
+                        <a class="dropdown-item text-white" href="/category/{{cat.category_name}}">{{cat.category_name}}</a>
+                        <div class="dropdown-divider"></div>
+                        {% endfor %}
+                    </div>
                 </li>
+                <li class="nav-item dropdown" >
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false">
                     Locations
                 </a>
+                <div class="dropdown-menu bg bg-dark " aria-labelledby="navbarDropdown">
+                    {% for cat in location_results %}
+                    <a class="dropdown-item text-white" href="/location/{{cat.location_name}}">{{cat.location_name}}</a>
+                    <div class="dropdown-divider"></div>                  
+                  {% endfor %}
+                </div>
                 </li>
             </ul>
 
     
 
-            <form class="form-inline" action="">
+            <form class="form-inline" action="{% url 'search_results' %}">
                 <div class="md-form my-1">
                     <input class="form-control mr-sm-3" type="text" placeholder="Search" aria-label="Search"
                         name="keyword">
-                        <i  class="fas fa-search text-white p-3 mb-2 bg-dark" type="submit"></i>
-                </div>
+                        
+                <!-- </div><i  class="fas fa-search  text-white p-3 mb-2 bg-dark" type="Search"></i> -->
 
             </form>
         </div>
