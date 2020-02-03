@@ -12,7 +12,7 @@
   {% if title %}
   <title>{{title}}</title>
   {% else %}
-    <title> smaTIQS Gallery </title>
+    <title> smaTIQS </title>
   {% endif %}
  
 
@@ -36,7 +36,7 @@
                 {% include "navbar.html" %}
                 
 
-    <div class="jumbotron jumbotron-fluid bg-light">
+    <div class="jumbotron ">
         <div class="">
           <h3 class="display-4 text-center font-weight-bold text-dark">Welcome To smaTIQS Gallery</h3>
         </div>
@@ -60,10 +60,11 @@
       <!-- MDB core JavaScript -->
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/js/mdb.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
-      <script type="text/javascript" src="{% static 'links.js' %}"></script>
+    
+      <script src="{%static 'js/art.js'%}"></script>
 
     {% endblock %}
 
 </body>
 
-</html>
+</html
