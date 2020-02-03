@@ -2,7 +2,7 @@
 {% block content %}
 
 
-    <div class="container">
+    <!-- <div class="container"> -->
      <div class="row">
                         {% if art_images%}
 
@@ -12,36 +12,42 @@
                     
                       </div>
 
-        <section class="gallery-block compact-gallery">
-        <div class="row no-gutters">
+        <div class="row">
             {% for image in art_images %}
-            <div class="col-md-4 col-sm-6 col-xs-12  item">
+            <div class="col-md-4 col-sm-6 col-xs-12  item" style="padding: 1%;" >
                 <div class="view overlay text-white ">
                     <a>
                     <img class="img-thumbnail" src="{{image.image_path.url}}"  class="img-fluid " alt="">
-                    <div class="description mask flex-center rgba-purple-light " style="display: flex;">
-                        <p class="description-heading">{{image.image_name}}</p>
-                        <p class="description-body">{{image.image_description}}</p>
+                    <div class="description mask  rgba-black-strong " style="margin: 0 auto;padding: 3%;">
+                        
+                        <p class="description-heading">  TITLE :  {{image.image_name}}</p>
+                        <span> DESCRIPTION :
+                        <p class="description-body"> {{image.image_description}}  </p></span>
                     
 
-                        <p class="white-text description-body "> <span class="badge"> <i class="fas fa-map-marker-alt"></i> {{image.image_location}}</span> </p>
-
-                        <p>  <span id="image{{image.id}}" hidden>{{image.image_path.url}}</span>
-                            <a onclick="copyToClipboard('image{{image.id}}')" class=" text-white" ><i class="far fa-copy"></i></a> 
+                        <p class="white-text description-body "> <span class="badge"> <i class="fas fa-map-marker-alt"></i>&nbsp; {{image.image_location}}</span> 
+                         
                         </p>
+                        
 
-                        <p> <small class="ml-45"><i class="far fa-clock"></i> {{image.post_date | timesince}} ago</small> </p>
+                        <p> <small class="ml-45"> {{image.post_date | timesince}} ago</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        
+                            <span id="image{{image.id}}" hidden>{{image.image_path.url}}</span>
+                            <a onclick="copyToClipboard('image{{image.id}}')" class=" text-white" ><i class="far fa-copy"> <small> Copy Link</small></i></a> 
+
+                        </p>
                     
                     
                 </a>
             </div>
         </div>
-                
+        
             </div>
             {% endfor %}
-        </div>
+            
+    
     
 
-</section>
+
 
 {% endblock %}
