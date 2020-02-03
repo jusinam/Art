@@ -2,23 +2,24 @@
 
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/static/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/static/favicon-16x16.png">
 
   {% if title %}
   <title>{{title}}</title>
   {% else %}
-    <title> smaTIQS </title>
+  <title> smaTIQS </title>
   {% endif %}
- 
+
 
   {% block styles %}
-    
-  
+
+
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
   <!-- Bootstrap core CSS -->
@@ -30,40 +31,41 @@
   {% endblock %}
 
 </head>
-    <body>
 
-    
-                {% include "navbar.html" %}
-                
+<body id="particles-js">
 
-    <div class="jumbotron ">
-        <div class="">
-          <h3 class="display-4 text-center font-weight-bold text-dark">Welcome To smaTIQS Gallery</h3>
-        </div>
-      </div>
-    
-   
-
-                        {% block content %}{% endblock %}
+  {% include "navbar.html" %}
 
 
-                  
-            
-              {% block scripts %}
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-     <!-- JQuery -->
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-      <!-- Bootstrap tooltips -->
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
-      <!-- Bootstrap core JavaScript -->
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-      <!-- MDB core JavaScript -->
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/js/mdb.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
-    
-      <script src="{%static 'js/art.js'%}"></script>
+  <div class="jumbotron ">
+    <div class="">
+      <h3 class="display-4 text-center font-weight-bold text-white">Welcome To smaTIQS Gallery</h3>
+    </div>
+  </div>
 
-    {% endblock %}
+
+  {% block content %}{% endblock %}
+
+
+  {% block scripts %}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- JQuery -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/js/mdb.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
+  <script src="{%static 'js/art.js'%}"></script>
+
+  <script type="text/javascript" src="{%static 'js/particles.js'%}"></script>
+  <script src="{%static 'js/app.js'%}"></script>
+
+  {% endblock %}
 
 </body>
 
