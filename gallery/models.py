@@ -32,6 +32,7 @@ class Image(models.Model):
     image_path = models.ImageField(upload_to = 'gallery/')
     image_category = models.ForeignKey(Category, on_delete=models.CASCADE)
     image_location = models.ForeignKey(Location, on_delete=models.CASCADE)
+    post_date = models.DateTimeField(auto_now_add=True,null=True)
 
 
     
@@ -68,5 +69,3 @@ class Image(models.Model):
     def obtain_by_location(cls,location):
         obtained_location = cls.objects.filter(image_location__location_name__icontains=location)
         return obtained_location
-
-
