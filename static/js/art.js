@@ -11,7 +11,7 @@ function copyToClipboard(id) {
     inputElement.select();
     inputElement.setSelectionRange(0, 99999);
     document.execCommand("copy");
-    alert("Url Copied");
+    alert("Link Copied Successfully");
     inputElement.setAttribute("hidden", true);
     document.removeChild(inputElement);
   }
