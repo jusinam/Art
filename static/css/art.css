@@ -1,0 +1,60 @@
+ 
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    color: #333;
+    font-family: 'Oswald', sans-serif;
+    background-image: url('http://getwallpapers.com/wallpaper/full/d/6/a/189092.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+
+#particles-js{
+    height: 100%;
+    position: relative;
+}
+
+.particles-js-canvas-el{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.dropdown-menu {
+    background-color: #5d4037;
+}
+
+.dropdown-item:hover{
+    background-color: #8d6e63;
+}
+
+nav {
+    background-color: #795548 ;
+}
+input[type='search']::placeholder {
+    color: white;
+}
+
+@media (min-width: 368px) {
+
+    .gallery-block.compact-gallery .item .description {
+        opacity: 0;
+    }
+
+    .gallery-block.compact-gallery .item a:hover .description {
+        opacity: 1;
+    }
+
+    .gallery-block .zoom-on-hover:hover .image {
+        transform: scale(1.2);
+        opacity: 0.5;
+    }
+}
+
