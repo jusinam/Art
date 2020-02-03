@@ -26,37 +26,40 @@
             <!-- Links -->
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link bg bg-transparent" href="{% url 'art' %}">FEEDS<span class="sr-only">(current)</span></a>
+                    <a class="nav-link bg bg-transparent" href="{% url 'art' %}">FEEDS<span
+                            class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Categories
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown" >
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         {% for cat in categories %}
-                        <a class="dropdown-item text-white" href="/category/{{cat.category_name}}">{{cat.category_name}}</a>
+                        <a class="dropdown-item text-white"
+                            href="/category/{{cat.category_name}}">{{cat.category_name}}</a>
                         <div class="dropdown-divider"></div>
                         {% endfor %}
                     </div>
                 </li>
-                <li class="nav-item dropdown" >
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    Locations
-                </a>
-                <div class="dropdown-menu " aria-labelledby="navbarDropdown" >
-                    {% for cat in location_results %}
-                    <a class="dropdown-item text-white" href="/location/{{cat.location_name}}">{{cat.location_name}}</a>
-                    <div class="dropdown-divider"></div>                  
-                  {% endfor %}
-                </div>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Locations
+                    </a>
+                    <div class="dropdown-menu " aria-labelledby="navbarDropdown">
+                        {% for cat in location_results %}
+                        <a class="dropdown-item text-white"
+                            href="/location/{{cat.location_name}}">{{cat.location_name}}</a>
+                        <div class="dropdown-divider"></div>
+                        {% endfor %}
+                    </div>
                 </li>
             </ul>
 
             <form class="form-inline md-form my-1 my-lg-0" action="{% url 'search_results' %}" method="GET">
-                <input class="form-control mr-sm-2 " type="search" placeholder="Search"
-                    aria-label="Search" name="search">
+                <input class="form-control mr-sm-2 " type="search" placeholder="Search" aria-label="Search"
+                    name="search">
                 <button class="btn " type="submit">
                     <i class="fas fa-search fa-2x text-white"></i>
                 </button>
@@ -65,7 +68,7 @@
         <!-- Collapsible content -->
     </nav>
     <!-- /.Navbar-->
-   
+
 
 </body>
 
