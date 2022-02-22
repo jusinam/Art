@@ -3,7 +3,7 @@
 A Django generated personal gallery application that displays photos respective to there categories and locations. Offers the user a copy-url functionality.
 
 ## Author
-* Evans Nyambane
+* Evans Onchagwa
 
 
 ### smaTIQS
@@ -91,4 +91,4 @@ No known bugs
 
 #### License
 MIT
-&copy;2020 Evans Nyambane
+&copy;2020 Evans Onchagwa
