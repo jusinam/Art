@@ -1,12 +1,12 @@
 
-# smaTIQS
+# Smatiqs
 A Django generated personal gallery application that displays photos respective to there categories and locations. Offers the user a copy-url functionality.
 
 ## Author
-* Evans Onchagwa
+* Evans ON
 
 
-### smaTIQS
+### Smatiqs
 
 ![alt text](smat.png)
 
@@ -44,7 +44,7 @@ A Django generated personal gallery application that displays photos respective 
   [Here's](https://www.python.org/) a brief intro about what a developer must do in order to start running the app locally:
 
   ```
-  $ git clone https://github.com/DjCooGie/Art.git
+  $ git clone https://github.com/jusinam/Art.git
   $ cd Art/
   ```
   * create a virtual environment
@@ -82,13 +82,12 @@ Launch the application locally by running the command
 No known bugs
 
 ## Site Live Link
-[https://evan-smat-ups.herokuapp.com/](https://evan-smat-ups.herokuapp.com/)
+[Click here/](https://evan-smat-ups.herokuapp.com/)
 
 #### Collaborate
 >Incase of any questions, problems or ideas concerning the app, feel free to reach out to me:
->>Github: [Evans Onchagwa](https://github.com/jusinam)
->>Email: evansonchagwa01@gmail.com
+>>Email: [Send mail](mailto:evansonchagwa01@gmail.com)
 
 #### License
 MIT
-&copy;2020 Evans Onchagwa
+&copy;2020 Evans ON
